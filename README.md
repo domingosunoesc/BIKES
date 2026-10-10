@@ -84,3 +84,11 @@ Dependência (`pom.xml`):
   - Será necessário criar a classe `UsuarioSenhaDTO.java` para requisição.
     - Não esquecer de validar os campos.
   - Fazer o tratamento de exceção criando a classe `PasswordInvalidException` para validar a senha atual e comparar a nova senha com a confirmação.
+  - No `PATCH /api/v1/usuarios/{id}`, enviar `novaSenha`, `confirmarSenha` e `senhaAtual`. As três senhas devem ter 6 caracteres.
+    ```json
+    {
+      "novaSenha": "123456",
+      "confirmarSenha": "123456",
+      "senhaAtual": "654321"
+    }
+    ```
